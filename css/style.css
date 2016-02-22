@@ -1,0 +1,517 @@
+ /* Fonts -------------------- */
+@font-face{
+  font-family:'Moon Light';
+  src:url('../fonts/Moon%20Light.otf');
+}
+
+@font-face{
+  font-family:'Nexa Rust Shadow';
+  src:url('../fonts/NexaRustSlab-BlackShadow01.otf');
+}
+
+@font-face{
+  font-family:'Nexa Rust Script';
+  src:url('../fonts/NexaRustScriptL-0.otf');
+}
+
+/* Base Styles -------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Moon Light", Helvetica, Arial, sans-serif;
+}
+
+.title, .page-title, .nav a, #backToTop {
+  font-family:'Nexa Rust Script', Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family:'Nexa Rust Shadow', Helevtica, Arial, sans-serif;
+}
+
+nav li {
+    display: inline-block;
+    padding: 0 10px;
+    text-decoration: underline;
+}
+
+h1 {
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 .5em;
+  border-bottom: 4px solid lightcoral;
+  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+}
+
+.flavors p {
+  font-size:1.3rem;
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes ------------------ */
+
+a:link {
+  color: lightcoral;
+  text-decoration: none;
+}
+
+a:visited {
+  color: lightcoral;
+}
+
+a:hover {
+  color: lightblue;
+}
+
+a:active {
+  color: lightcoral;
+}
+
+/* Main Styles --------------------- */
+
+.main-header {
+  padding-top: 170px;
+  height: 950px;
+  background: #ffa949 url('../img/icecream.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.title {
+  color: black;
+  font-size: 2.625rem;
+  letter-spacing:.065em;
+  font-weight:200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+	padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content, .page-bottom {
+	padding-top: 80px;
+	padding-bottom: 70px;
+  border-bottom: 2px solid #dfe2e6;
+}
+
+.callout {
+  font-size: 3rem;
+  border-right: 3px solid;
+  border-left: 3px solid;
+  padding: 5px 30px 5px;
+  margin: 50px auto 0;
+  display: inline-block;
+  background: rgba(67,74,82,0.8);
+  border-radius: 25px 5px;
+  box-shadow: 0 2px 15px #aaa, inset 0 0 15px 5px lightblue;
+  font-family:'Nexa Rust Script';
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid lightcoral;
+}
+
+
+/* Home Page Layout Styles ------------------ */
+
+.primary-content,
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.hours{
+  list-style:none;
+  padding-left: 40px;
+  margin-top:0px;
+}
+
+.flavors {
+  color: white;
+  text-align: center;
+  padding: 8% 24%;
+  border-top: 10px solid lightcoral;
+  margin: 105px 0 60px;
+  background: #434a52 no-repeat center;
+  background-size: cover;
+  box-shadow: 0 2px 15px #aaa, inset 0 0 60px 5px lightblue;
+  border-radius: 50px 10px;
+}
+
+.events img{
+  border-top: 10px solid lightcoral;
+  border-radius: 50px 10px;
+}
+
+.events img, .tips img{
+  height:225px;
+  width:390px;
+}
+
+.tips img{
+  border-top: 10px solid lightcoral;
+  border-radius: 50px 10px;
+}
+
+.arrow {
+  width: 50px;
+  margin-top: 150px;
+}
+
+.event-text p, .shop-story p {
+  font-size: 1rem;
+  color:lightblue;
+}
+
+/* Floated Columns ------------------ */
+
+.events,
+.tips {
+  width: 46.5%;
+}
+
+.tips {
+  float: left;
+}
+
+.events {
+  float: right;
+}
+
+#backToTop, #backToTop a {
+  text-align:center;
+  text-transform:capitalize;
+  color: lightblue;
+  font-size: 2.5rem;
+}
+
+/* Other Page Layout ------------------ */
+
+.page-header {
+  padding-top: 10px;
+  height: 150px;
+  background: crimson;
+  background-size:cover;
+  border-bottom: 10px solid lightcoral;
+  box-shadow: 0 2px 5px lightcoral, inset 0 0 120px 10px lightcoral
+}
+
+.cognito .c-forms-form {
+  font-family: 'Moon Light',Helvetica,sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+  color: lightblue;
+}
+
+.c-section {
+    color: lightblue;
+    text-align: left;
+    font-family: 'Moon light';
+}
+
+.cognito .c-helptext {
+  padding: 5px 8px 2px 8px;
+  font-style: italic;
+  font-size: .6em;
+  clear: left;
+  margin: 0;
+}
+
+.c-forms-heading h2 {
+  font-size: 3rem;
+  line-height: 1.1;
+  margin: 0 0 .5em;
+  border-bottom: 4px solid lightcoral;
+  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+}
+
+.c-forms-description {
+  border-top: 3px solid lightcoral;
+  color:lightblue;
+}
+
+#c-submit-button {
+    font-family: 'Moon Light';
+}
+
+.flavor-list-1 {
+  color: lightblue;
+}
+
+.flavor-list-2 {
+  color:white;
+}
+
+.flavor-list-3 {
+  color:lightcoral;
+}
+
+/* Float Clearfix ------------------ */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries -------------------- */
+
+@media screen and (max-width:1024px) {
+    .primary-content, .secondary-content {
+    width: 90%;
+   }
+  .flavors {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .logo {
+    float:left;
+    margin-left: 10px;
+  }
+
+  .logo h1 {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+    margin: 0 0 10px;
+    border-bottom: 2px solid black;
+  }
+
+  .page-title {
+    color: black;
+    font-size: 1.5rem;
+    letter-spacing:.065em;
+    font-weight:200;
+    padding-bottom: 10px;
+  }
+
+  nav ul {
+    list-style: none;
+    font-size: 2rem;
+    text-align: right;
+    padding-left: 0px;
+    margin: -160px 0 100px;
+  }
+
+  nav a:link, nav a:visited {
+    color: crimson;
+  }
+
+  .page-nav {
+    list-style: none;
+    font-size: 2rem;
+    text-align: right;
+    padding-left: 0px;
+    margin: 0;
+  }
+
+  .page-nav a:link, .page-nav a:visited {
+    color:lightblue;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .primary-content, .secondary-content {
+    width: 100%;
+    padding:20px;
+    border-top:none;
+    margin: auto;
+  }
+
+  .events, .tips {
+    text-align: center;
+  }
+
+  .secondary-content {
+    margin-top: 75px;
+  }
+
+  .main-header {
+    max-height:600px;
+    padding:50px 25px 0;
+  }
+
+  .title {
+    font-size:1.3rem;
+    border-bottom:1px solid black;
+  }
+
+  h1 {
+    font-size:5rem;
+    line-height:1.1;
+  }
+
+  .arrow {
+    display:none;
+  }
+
+  .intro {
+    font-size:1rem;
+  }
+
+  .events, .tips {
+    float:none;
+    width:100%;
+  }
+
+  .main-footer {
+    padding:20px 0;
+  }
+
+  nav ul {
+    text-align: center;
+    margin: -50px 0 60px;
+    list-style: none;
+    padding-left: 0;
+    font-size: 2rem;
+  }
+
+  nav a:link, nav a:visited {
+    color: crimson;
+  }
+
+
+
+  .page-nav a:link, .page-nav a:visited {
+    color:lightblue;
+  }
+
+  .hours {
+    padding-left:0;
+  }
+}
+
+@media screen and (max-width: 1207px){
+  .logo h1 {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    font-weight: normal;
+    line-height: 1.3;
+    text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+    margin: 0 0 10px;
+    border-bottom:0;
+  }
+    .page-header {
+    padding-top: 10px;
+    height: 250px;
+    background: lightcoral;
+    background-size:cover;
+  }
+
+  .logo {
+    float:none;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .page-title {
+    color: black;
+    font-size: 1.5rem;
+    letter-spacing:.065em;
+    font-weight:200;
+    padding-bottom: 10px;
+  }
+
+  .page-nav {
+    list-style: none;
+    font-size: 2rem;
+    text-align: center;
+    padding-left: 0px;
+    margin: 0;
+    float: none;
+    clear: both;
+  }
+}
+
+@media screen and (max-width: 550px){
+  nav ul {
+    text-align: center;
+    margin: -20px 0 70px;
+    list-style: none;
+    padding-left: 0px;
+    font-size: 1.15rem;
+  }
+
+  nav a:link, nav a:visited {
+    color: crimson;
+  }
+
+  .page-nav {
+    list-style: none;
+    font-size: 1.3rem;
+    text-align: center;
+    padding-left: 0px;
+    float:none;
+    clear:both;
+  }
+
+  .page-nav a:link, .page-nav a:visited {
+    color:lightblue;
+  }
+
+  h1 {
+    font-size:4rem;
+    line-height:1.1;
+  }
+}
