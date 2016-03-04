@@ -1,17 +1,18 @@
- /* Fonts -------------------- */
+/* Fonts -------------------- */
+
 @font-face{
-  font-family:'Moon Light';
-  src:url('../fonts/Moon%20Light.otf');
+  font-family:'American Tuscan';
+  src:url('../fonts/AmericanTuscan-Regular.ttf');
 }
 
 @font-face{
-  font-family:'Nexa Rust Shadow';
-  src:url('../fonts/NexaRustSlab-BlackShadow01.otf');
+  font-family:'Cast Iron';
+  src:url('../fonts/CastIron-Condensed.otf');
 }
 
 @font-face{
-  font-family:'Nexa Rust Script';
-  src:url('../fonts/NexaRustScriptL-0.otf');
+  font-family:'Parisish';
+  src:url('../fonts/Parisish.ttf');
 }
 
 /* Base Styles -------------------- */
@@ -23,60 +24,68 @@
 body {
   color: #878787;
   margin: 0;
-  font: 1em/1.5 "Moon Light", Helvetica, Arial, sans-serif;
+  font: 1em/1.5 "Cast Iron", Arial, sans-serif;
+  letter-spacing: 1px;
 }
 
-.title, .page-title, .nav a, #backToTop {
-  font-family:'Nexa Rust Script', Helvetica, Arial, sans-serif;
+h1, h3, .logo-span {
+  font-family:'American Tuscan', Helevtica, Arial, sans-serif;
 }
 
-h1, h2, h3 {
-  font-family:'Nexa Rust Shadow', Helevtica, Arial, sans-serif;
+.nav span {
+    margin: 0 -30px 0 10px;
 }
 
 nav li {
-    display: inline-block;
-    padding: 0 10px;
-    text-decoration: underline;
-}
-
-h1 {
-  font-size: 6rem;
-  color: rgba(255, 255, 255, 1);
-  text-transform: uppercase;
-  font-weight: normal;
-  line-height: 1.3;
-  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
-  margin: 12px 0 0;
+  display: inline-block;
+  padding: 0 20px;
+  font-size: 3rem;
+  border-top: 3px solid steelblue;
+  border-bottom: 3px solid steelblue;
 }
 
 h2 {
-  font-size: 3rem;
+  font-size: 4.25rem;
   line-height: 1.1;
-  margin: 0 0 .5em;
-  border-bottom: 4px solid lightcoral;
-  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
+  color: #48525c;
+  border-bottom: 4px solid lightgreen;
+  font-family:'Parisish', Helevtica, Arial, sans-serif;
+  margin: 100px auto 0;
+  font-weight: 200;
 }
 
-.flavors p {
-  font-size:1.3rem;
+.why-us h2 {
+  font-size: 4.25rem;
+  font-weight: 200;
+  line-height: 1.1;
+  border-bottom: 4px solid lightgreen;
+  font-family:'Parisish', Helevtica, Arial, sans-serif;
+  margin: 100px auto 0;
+}
+
+.why-us li {
+  font-size: 1.8rem;
+}
+
+.events h3 a, .tips h3 a, .why-us h2 a  {
+  font: 4.25rem 'Parisish', Helvetica, sans-serif;
+  color: #48525c;
 }
 
 h3 {
-  font-size: 1.25em; /* 20px/16px  */
-  color: #48525c;
   line-height: 1.2;
-  margin-bottom: 1.7em; /* 34px */
+  margin-bottom: 1rem;
+  border-bottom: 4px solid steelblue;
+  text-transform:capitalize;
 }
 
 img {
   max-width: 100%;
-  margin-bottom: 20px;
 }
 
 ul,
 ol {
-  margin: 30px 0;
+  margin: 10px 0;
   list-style: none;
   padding-left: 0;
 }
@@ -88,29 +97,30 @@ li {
 /* Pseudo-classes ------------------ */
 
 a:link {
-  color: lightcoral;
+  color: lightgreen;
   text-decoration: none;
 }
 
 a:visited {
-  color: lightcoral;
+  color: lightgreen;
 }
 
 a:hover {
-  color: lightblue;
+  color: lightgreen;
 }
 
 a:active {
-  color: lightcoral;
+  color: lightgreen;
 }
 
 /* Main Styles --------------------- */
 
 .main-header {
   padding-top: 170px;
-  height: 950px;
-  background: #ffa949 url('../img/icecream.jpg') no-repeat center;
+  height: 750px;
+  background: #5fcf80 url('../img/burger.jpg') no-repeat center;
   background-size: cover;
+  border-top: 10px solid lightgreen;
 }
 
 .title {
@@ -139,30 +149,19 @@ a:active {
 }
 
 .secondary-content, .page-bottom {
-	padding-top: 80px;
 	padding-bottom: 70px;
-  border-bottom: 2px solid #dfe2e6;
-}
-
-.callout {
-  font-size: 3rem;
-  border-right: 3px solid;
-  border-left: 3px solid;
-  padding: 5px 30px 5px;
-  margin: 50px auto 0;
-  display: inline-block;
-  background: rgba(67,74,82,0.8);
-  border-radius: 25px 5px;
-  box-shadow: 0 2px 15px #aaa, inset 0 0 15px 5px lightblue;
-  font-family:'Nexa Rust Script';
 }
 
 .main-footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  border-bottom: 10px solid lightcoral;
+  background:steelblue;
+  border-bottom: 10px solid lightgreen;
 }
 
+footer p a {
+    font-size: 1.5rem;
+}
 
 /* Home Page Layout Styles ------------------ */
 
@@ -175,129 +174,238 @@ a:active {
   max-width: 960px;
 }
 
-.hours{
+.hours {
   list-style:none;
-  padding-left: 40px;
   margin-top:0px;
 }
 
-.flavors {
-  color: white;
-  text-align: center;
-  padding: 8% 24%;
-  border-top: 10px solid lightcoral;
-  margin: 105px 0 60px;
-  background: #434a52 no-repeat center;
-  background-size: cover;
-  box-shadow: 0 2px 15px #aaa, inset 0 0 60px 5px lightblue;
-  border-radius: 50px 10px;
+.mobile-logo {
+  display:none;
 }
 
-.events img{
-  border-top: 10px solid lightcoral;
-  border-radius: 50px 10px;
+.main-footer img:hover {
+  background: lightgreen;
+  border-radius: 50%;
 }
 
-.events img, .tips img{
-  height:225px;
-  width:390px;
-}
-
-.tips img{
-  border-top: 10px solid lightcoral;
-  border-radius: 50px 10px;
-}
-
-.arrow {
-  width: 50px;
-  margin-top: 150px;
-}
-
-.event-text p, .shop-story p {
-  font-size: 1rem;
-  color:lightblue;
+.page-nav ul {
+  border-bottom: 10px solid lightgreen;
 }
 
 /* Floated Columns ------------------ */
 
 .events,
-.tips {
+.tips, .subscribe-form {
   width: 46.5%;
+  text-align:center;
+}
+
+.why-us {
+  width: 80%;
+  text-align:center;
+  margin:150px auto;
+  clear:both;
 }
 
 .tips {
   float: left;
 }
 
-.events {
-  float: right;
+.tips li, .events li, .hours li {
+  font-size: 2rem;
 }
 
-#backToTop, #backToTop a {
-  text-align:center;
-  text-transform:capitalize;
-  color: lightblue;
-  font-size: 2.5rem;
+.events {
+  float: right;
 }
 
 /* Other Page Layout ------------------ */
 
 .page-header {
-  padding-top: 10px;
-  height: 150px;
-  background: crimson;
-  background-size:cover;
-  border-bottom: 10px solid lightcoral;
-  box-shadow: 0 2px 5px lightcoral, inset 0 0 120px 10px lightcoral
+  padding-top: 170px;
+  height: 750px;
+  background: #5fcf80 url('../img/table.jpg') no-repeat center;
+  background-size: cover;
+  border-top: 10px solid lightgreen;
 }
 
-.cognito .c-forms-form {
-  font-family: 'Moon Light',Helvetica,sans-serif;
-  background-color: rgba(0, 0, 0, 0);
-  color: lightblue;
+.cognito p {
+  color:steelblue;
+  font-size: 2rem;
+}
+
+.c-forms-confirmation-message p {
+  font-family: 'Cast Iron';
+  color: #878787;
+  line-height: 2.1rem;
 }
 
 .c-section {
-    color: lightblue;
-    text-align: left;
-    font-family: 'Moon light';
+  color: steelblue;
+  text-align: left;
 }
 
 .cognito .c-helptext {
   padding: 5px 8px 2px 8px;
   font-style: italic;
-  font-size: .6em;
+  font-size: 1.5rem;
+  font-family:'Cast Iron';
   clear: left;
   margin: 0;
+  line-height: 1.1;
+}
+
+.cognito .c-label {
+  font-size:1.8rem;
+  font-family:'Cast Iron';
+  font-weight:100;
 }
 
 .c-forms-heading h2 {
   font-size: 3rem;
   line-height: 1.1;
   margin: 0 0 .5em;
-  border-bottom: 4px solid lightcoral;
-  text-shadow: 5px 8px 10px rgba(0,0,0,.8);
 }
 
 .c-forms-description {
-  border-top: 3px solid lightcoral;
-  color:lightblue;
+  border-top: 4px solid lightgreen;
+  color:steelblue;
 }
 
 #c-submit-button {
-    font-family: 'Moon Light';
+    font-family: 'Cast Iron';
+    background: white;
+    font-size: 1.8rem;
+    color: #878787;
 }
 
-.flavor-list-1 {
-  color: lightblue;
+#c-submit-button:hover {
+    background-color: lightgreen;
 }
 
-.flavor-list-2 {
-  color:white;
+.c-label label {
+  font-weight: 100;
+  font-family: 'Cast Iron';
+  font-size: 1.8rem;
 }
 
-.flavor-list-3 {
-  color:lightcoral;
+.list-head {
+  color:lightgreen;
+  border-bottom: 2px solid #878787;
+}
+
+.list-item, .list-head {
+  font-size: 3rem;
+}
+
+.burger-list a {
+  color:steelblue;
+}
+
+.reason-alt {
+  color:steelblue;
+}
+
+.reason-alt span {
+  color: lightgreen;
+}
+
+.menu {
+  max-width: 1000px;
+  text-align: center;
+  margin: auto auto 10rem;
+  font-size: 3rem;
+}
+
+.menu-head {
+  color: lightgreen;
+  border-bottom: 4px solid #48525c;
+}
+
+.menu h3 {
+  font-weight:100;
+}
+
+.menu p {
+  margin: -5px 0 0;
+  font-size: 1.3rem;
+  font-family: 'American Tuscan';
+  font-weight: 100;
+  color: lightgreen;
+}
+
+.menu li {
+  font-size: 2rem;
+  font-family:'Parisish';
+  margin-bottom:2rem;
+}
+
+.menu dd {
+  margin: -2.5rem 0 1.5rem;
+  font-size: 1.2rem;
+  font-family: 'American Tuscan';
+  font-weight: 100;
+  color: lightgreen;
+}
+
+.menu-alt {
+  color: steelblue !important;
+}
+
+.menu-other {
+  color: lightgreen !important;
+}
+
+.shop-story h2 {
+  font-family:'American Tuscan';
+}
+
+.shop-story p {
+  font-family:'Parisish';
+  font-size: 1.5rem;
+}
+
+.shop-story span {
+  color:lightgreen;
+}
+
+#snacks, #sides, #drinks {
+  float:left;
+  margin: auto auto 10rem;
+}
+
+.divider {
+  clear:both;
+}
+
+#salads, #kids, #desserts {
+  float:right;
+  margin: auto auto 10rem;
+}
+
+#burgers {
+  clear:both;
+  margin: auto auto 10rem;
+  max-width: 90%;
+}
+
+#dogs, #adult {
+  clear: both;
+  max-width: 50%;
+  margin: auto auto 10rem;
+}
+
+.menu p a {
+  color: lightgreen;
+}
+
+.number {
+  font-family:'Cast Iron';
+}
+
+.bom {
+  color:steelblue;
+  text-transform:uppercase;
 }
 
 /* Float Clearfix ------------------ */
@@ -308,19 +416,25 @@ a:active {
   clear: both;
 }
 
+.subscribe-form {
+  clear:both;
+  margin:auto auto 10rem;
+}
+
 /* Media Queries -------------------- */
 
 @media screen and (max-width:1024px) {
     .primary-content, .secondary-content {
     width: 90%;
    }
+
   .flavors {
     padding: 10% 12%;
     margin: 50px 0 20px;
   }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 1120px) {
   .logo {
     float:left;
     margin-left: 10px;
@@ -348,29 +462,21 @@ a:active {
   nav ul {
     list-style: none;
     font-size: 2rem;
-    text-align: right;
+    text-align: center;
     padding-left: 0px;
-    margin: -160px 0 100px;
   }
 
   nav a:link, nav a:visited {
-    color: crimson;
+    color: steelblue;
   }
 
-  .page-nav {
-    list-style: none;
-    font-size: 2rem;
-    text-align: right;
-    padding-left: 0px;
-    margin: 0;
-  }
-
-  .page-nav a:link, .page-nav a:visited {
-    color:lightblue;
+  .logo-span a:link, .logo-span a:visited {
+    color:lightgreen;
+    font-size: 4.5rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
   .primary-content, .secondary-content {
     width: 100%;
     padding:20px;
@@ -391,6 +497,11 @@ a:active {
     padding:50px 25px 0;
   }
 
+  .page-header {
+    max-height:400px;
+    padding:50px 25px 0;
+  }
+
   .title {
     font-size:1.3rem;
     border-bottom:1px solid black;
@@ -401,10 +512,6 @@ a:active {
     line-height:1.1;
   }
 
-  .arrow {
-    display:none;
-  }
-
   .intro {
     font-size:1rem;
   }
@@ -412,6 +519,8 @@ a:active {
   .events, .tips {
     float:none;
     width:100%;
+    max-width: 600px;
+    margin: auto;
   }
 
   .main-footer {
@@ -420,28 +529,25 @@ a:active {
 
   nav ul {
     text-align: center;
-    margin: -50px 0 60px;
+    margin: 10px 0;
     list-style: none;
     padding-left: 0;
     font-size: 2rem;
   }
 
   nav a:link, nav a:visited {
-    color: crimson;
+    color: steelblue;
   }
 
-
-
-  .page-nav a:link, .page-nav a:visited {
-    color:lightblue;
+  .logo-span a:link, .logo-span a:visited {
+    color: lightgreen;
+    font-size: 3.5rem;
   }
 
   .hours {
     padding-left:0;
   }
-}
 
-@media screen and (max-width: 1207px){
   .logo h1 {
     font-size: 2rem;
     color: rgba(255, 255, 255, 1);
@@ -451,12 +557,6 @@ a:active {
     text-shadow: 5px 8px 10px rgba(0,0,0,.8);
     margin: 0 0 10px;
     border-bottom:0;
-  }
-    .page-header {
-    padding-top: 10px;
-    height: 250px;
-    background: lightcoral;
-    background-size:cover;
   }
 
   .logo {
@@ -473,45 +573,72 @@ a:active {
     padding-bottom: 10px;
   }
 
-  .page-nav {
-    list-style: none;
-    font-size: 2rem;
+  .subscribe-form {
+    width: 70%;
     text-align: center;
-    padding-left: 0px;
+  }
+}
+
+@media screen and (max-width: 1040px){
+  .logo-span a:link, .logo-span a:visited {
+    display:none;
+  }
+
+  .mobile-logo {
+    display: block;
+    color: lightgreen;
+    text-align: center;
     margin: 0;
-    float: none;
-    clear: both;
+    font-size: 3rem;
+    font-weight: 100;
+  }
+
+  .nav span {
+    display:none;
+  }
+}
+
+@media screen and (max-width: 760px){
+  #snacks, #sides, #drinks, #salads, #kids, #desserts, #burgers, #dogs, #adult {
+    clear:both;
+    float:none;
+    max-width: 70%;
   }
 }
 
 @media screen and (max-width: 550px){
   nav ul {
     text-align: center;
-    margin: -20px 0 70px;
+    margin: 0;
     list-style: none;
     padding-left: 0px;
     font-size: 1.15rem;
   }
 
   nav a:link, nav a:visited {
-    color: crimson;
-  }
-
-  .page-nav {
-    list-style: none;
-    font-size: 1.3rem;
-    text-align: center;
-    padding-left: 0px;
-    float:none;
-    clear:both;
-  }
-
-  .page-nav a:link, .page-nav a:visited {
-    color:lightblue;
+    color: steelblue;
   }
 
   h1 {
     font-size:4rem;
     line-height:1.1;
+  }
+
+  .mobile-logo {
+    font-size: 2.35rem;
+  }
+
+  nav li {
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 400px){
+  .mobile-logo {
+    font-size: 1.7rem;
+  }
+
+  nav li {
+    font-size: 2rem;
   }
 }
